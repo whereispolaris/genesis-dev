@@ -165,6 +165,6 @@ function site_description_not_homepage() {
 add_filter('genesis_footer_output', 'my_credits');
 
 function my_credits() {
-	return 'Copywight &copy; 2020<a href="/"> Digital Cry</a>';
+	return '[footer_copy] <a href="/"> Digital Cry</a>';
 }
 
