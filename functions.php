@@ -94,8 +94,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 // Add support for custom header.
 add_theme_support( 'custom-header', array(
-	'width'           => 600,
-	'height'          => 160,
+	'width'           => 638,
+	'height'          => 154,
 	'header-selector' => '.site-title a',
 	'header-text'     => false,
 	'flex-height'     => true,
@@ -160,3 +160,4 @@ function site_description_not_homepage() {
 		genesis_seo_site_description();
 	}
 }
+
