@@ -962,6 +962,15 @@ img.alignright,
 	font-size: 2rem;
 }
 
+/* ## Front Page 1 Widget
+--------------------------------------------- */
+
+.front-page-1-widget {
+	background-color: white;
+	color:#ed1c24;
+	padding-top: 20px;
+	margin: auto;
+}
 
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */

@@ -15,7 +15,7 @@ function my_homepage_setup() {
 function display_front_page_1_widget() {
 
 	genesis_widget_area( 'front-page-1', array(
-		'before' => '<div class="front-page-1-class"><div class="wrap">',
+		'before' => '<div class="front-page-1-widget"><div class="wrap">',
 		'after'  => '</div></div>',
 	) );
 }
