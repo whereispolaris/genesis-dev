@@ -149,3 +149,13 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+// Only display the site tagline in the homepage
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+add_action('genesis_site_description', 'site_description_not_homepage');
+
+function site_description_not_homepage() {
+	if (is_front_page() && is_home()) {
+		genesis_seo_site_description();
+	}
+}
