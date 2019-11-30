@@ -168,3 +168,9 @@ function my_credits() {
 	return '[footer_copy] <a href="/"> Digital Cry</a>';
 }
 
+// Register widget areas
+genesis_register_sidebar( array(
+	'id'          => 'front-page-1',
+	'name'        => __( 'Front Page 1', 'genesis-sample' ),
+	'description' => __( 'This is a widget that goes on the front page.', 'genesis-sample' ),
+) );
