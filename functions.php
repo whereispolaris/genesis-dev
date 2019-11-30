@@ -150,10 +150,11 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
-// Only display the site tagline in the homepage
+// Unhooking and conditionally re-hooking the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 add_action('genesis_site_description', 'site_description_not_homepage');
 
+// Only display the site description in the home or front page
 function site_description_not_homepage() {
 	if (is_front_page() && is_home()) {
 		genesis_seo_site_description();
