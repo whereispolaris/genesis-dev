@@ -1041,7 +1041,7 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
+	background-color: #ED1C24;
 }
 
 .site-header > .wrap {
@@ -1059,7 +1059,7 @@ img.alignright,
 
 .header-image .title-area {
 	margin: 0 auto;
-	max-width: 300px;
+	max-width: 330px;
 	padding: 0;
 }
 
