@@ -967,9 +967,18 @@ img.alignright,
 
 .front-page-1-widget {
 	background-color: white;
-	color:#ed1c24;
+	color:#ED1C24;
 	padding-top: 20px;
 	margin: auto;
+}
+
+/* ## My Widget
+--------------------------------------------- */
+
+.my-widget-single-post {
+	background-color: #ED1C24;
+	color: white;
+	padding: 20px;
 }
 
 /* # Plugins

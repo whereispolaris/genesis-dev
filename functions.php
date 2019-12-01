@@ -182,14 +182,16 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is a widget only displays on single posts.', 'genesis-sample' ),
 ) );
 
+// Hook  single post widget into Genesis
 add_action('genesis_meta', 'my_widget_single_posts');
 
 function my_widget_single_posts() {
-	if (is_active_sidebar( 'my-widget' ) && is_home()) {
+	if (is_active_sidebar( 'my-widget' ) && is_single()) {
 		add_action( 'genesis_entry_header', 'display_my_widget_single_posts' );
 	}
 }
 
+// Display My Widget
 function display_my_widget_single_posts() {
 	genesis_widget_area( 'my-widget', array(
 		'before' => '<div class="my-widget-single-post"><div class="wrap">',
