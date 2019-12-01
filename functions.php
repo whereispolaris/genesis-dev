@@ -168,9 +168,32 @@ function my_credits() {
 	return '[footer_copy] <a href="/"> Digital Cry</a>';
 }
 
-// Register widget areas
+// Register widget area
 genesis_register_sidebar( array(
 	'id'          => 'front-page-1',
 	'name'        => __( 'Front Page 1', 'genesis-sample' ),
 	'description' => __( 'This is a widget that goes on the front page.', 'genesis-sample' ),
 ) );
+
+// Register widget area
+genesis_register_sidebar( array(
+	'id'          => 'my-widget',
+	'name'        => __( 'My Widget', 'genesis-sample' ),
+	'description' => __( 'This is a widget only displays on single posts.', 'genesis-sample' ),
+) );
+
+add_action('genesis_meta', 'my_widget_single_posts');
+
+function my_widget_single_posts() {
+	if (is_active_sidebar( 'my-widget' ) && is_home()) {
+		add_action( 'genesis_entry_header', 'display_my_widget_single_posts' );
+	}
+}
+
+function display_my_widget_single_posts() {
+	genesis_widget_area( 'my-widget', array(
+		'before' => '<div class="my-widget-single-post"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+}
+
