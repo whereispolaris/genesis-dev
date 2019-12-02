@@ -28,7 +28,7 @@ add_action('genesis_loop', 'homepage_loop');
 function homepage_loop() {
 
 	$args = array(
-		'cat' => 52,
+		'cat' => 2,
 	);
 
 	genesis_custom_loop($args);
