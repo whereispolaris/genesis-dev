@@ -150,6 +150,10 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
+// ---------------------------------------------
+// Customizations by Santiago E (whereispolaris) 
+// ---------------------------------------------
+
 // Unhooking and conditionally re-hooking the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 add_action('genesis_site_description', 'site_description_not_homepage');
@@ -199,7 +203,7 @@ function display_my_widget_single_posts() {
 	) );
 }
 
-// Adding custom genesis loop
+// Adding custom loop using the genesis loop 
 remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'my_custom_loop');
 function my_custom_loop() {
