@@ -20,6 +20,20 @@ function display_front_page_1_widget() {
 	) );
 }
 
+// Remove the custom loop in the homepage
+remove_action('genesis_loop', 'my_custom_loop');
+
+// Add a custom loop showing only posts from a single category
+add_action('genesis_loop', 'homepage_loop');
+function homepage_loop() {
+
+	$args = array(
+		'cat' => 52,
+	);
+
+	genesis_custom_loop($args);
+}
+
 // Load the genesis framework
 genesis();
 
