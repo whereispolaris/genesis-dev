@@ -199,3 +199,14 @@ function display_my_widget_single_posts() {
 	) );
 }
 
+// Adding custom genesis loop
+remove_action('genesis_loop', 'genesis_do_loop');
+add_action('genesis_loop', 'my_custom_loop');
+function my_custom_loop() {
+	$args = array(
+		'order' => 'ASC',
+	);
+	genesis_custom_loop($args);
+
+}
+
